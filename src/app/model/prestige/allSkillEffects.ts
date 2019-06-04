@@ -56,20 +56,20 @@ export class AllSkillEffects {
   //#region Combat
   static readonly DOUBLE_NAVAL_CAPACITY = new SkillEffect(11, "S", 1);
   static readonly DOUBLE_DARK_MATTER = new SkillEffect(12, "S", 2);
-  static readonly MODULE_LEVEL = new SkillEffect(13, "S", 1);
+  static readonly MODULE_LEVEL = new SkillEffect(13, "S", 10);
   static readonly DOUBLE_MISSILE = new SkillEffect(15, "S", 3);
   static readonly MULTI_FACTORY = new SkillEffect(16, "2");
   //#endregion
   //#region Robot Modding
   static readonly FACTORY_BONUS = new SkillEffect(17, "2", 3);
-  static readonly MODDING_PLUS = new SkillEffect(18, "S", 5);
-  static readonly DOUBLE_MODDING = new SkillEffect(19, "S", 1);
+  static readonly MODDING_PLUS = new SkillEffect(18, "S", 10);
+  static readonly DOUBLE_MODDING = new SkillEffect(19, "S", 10);
 
   static readonly MOD_METAL_MINER = new SkillEffect(20, "3");
   static readonly MOD_CRYSTAL_MINER = new SkillEffect(21, "3");
   static readonly MOD_ENERGY = new SkillEffect(22, "3");
   static readonly MOD_ALLOY = new SkillEffect(23, "3");
-  static readonly MOD_CPU = new SkillEffect(24, "3");
+  static readonly MOD_CPU = new SkillEffect(24, "10");
   static readonly MOD_WORKER = new SkillEffect(25, "3");
   static readonly MOD_SEARCH = new SkillEffect(26, "3");
   // static readonly MOD_WARRIOR = new SkillEffect(27, "3");
@@ -84,11 +84,11 @@ export class AllSkillEffects {
   static readonly DOUBLE_DISTRICTS = new SkillEffect(34, "S", 5);
   //#endregion
   //#region Resource Gain Multi
-  static readonly ENERGY_MULTI = new SkillEffect(35, "2");
-  static readonly ALLOY_MULTI = new SkillEffect(36, "2");
-  static readonly COMPUTING_MULTI = new SkillEffect(37, "2");
-  static readonly SHIPYARD_MULTI = new SkillEffect(38, "2");
-  static readonly RESEARCH_MULTI = new SkillEffect(39, "2");
+  static readonly ENERGY_MULTI = new SkillEffect(35, "10");
+  static readonly ALLOY_MULTI = new SkillEffect(36, "10");
+  static readonly COMPUTING_MULTI = new SkillEffect(37, "10");
+  static readonly SHIPYARD_MULTI = new SkillEffect(38, "10");
+  static readonly RESEARCH_MULTI = new SkillEffect(39, "10");
   //#endregion
 
   static initialize(prestige = false) {
@@ -229,8 +229,6 @@ export class AllSkillEffects {
         "% Dark Matter"
       );
     };
-    AllSkillEffects.MODULE_LEVEL.limit = new Decimal(1);
-    AllSkillEffects.MODULE_LEVEL.isLimited = true;
     AllSkillEffects.MODULE_LEVEL.getDescription = (num = 1) => {
       return (
         "+ " +
